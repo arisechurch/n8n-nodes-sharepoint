@@ -1,10 +1,12 @@
 import { INodeType, INodeTypeDescription } from "n8n-workflow"
-import { execute, listOptions, run, siteOptions } from "./GenericFunctions"
+import { listOptions, run, siteOptions } from "./GenericFunctions"
+import { execute } from "../common"
 
 export class MicrosoftSharepoint implements INodeType {
   description: INodeTypeDescription = {
     displayName: "Microsoft Sharepoint",
     name: "microsoftSharepoint",
+    icon: "file:sharepoint.svg",
     group: ["transform"],
     version: 1,
     description: "Microsoft Sharepoint API",
