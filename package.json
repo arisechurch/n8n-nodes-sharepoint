@@ -46,7 +46,7 @@
     "gulp": "^4.0.2",
     "n8n-core": "*",
     "n8n-workflow": "*",
-    "prettier": "^2.7.1",
+    "prettier": "^2.8.7",
     "typescript": "https://cdn.jsdelivr.net/npm/@tsplus/installer@0.0.171/compiler/typescript.tgz"
   },
   "dependencies": {
