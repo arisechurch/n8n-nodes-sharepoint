@@ -21,9 +21,10 @@ export class MicrosoftSharepoint implements INodeType {
 		],
 		properties: [
 			{
-				displayName: 'Sharepoint Site',
+				displayName: 'Sharepoint Site Name or ID',
 				name: 'site',
 				type: 'options',
+				description: 'Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code-examples/expressions/">expression</a>',
 				required: true,
 				typeOptions: {
 					loadOptionsMethod: 'getSites',
@@ -44,9 +45,10 @@ export class MicrosoftSharepoint implements INodeType {
 				],
 			},
 			{
-				displayName: 'List',
+				displayName: 'List Name or ID',
 				name: 'list',
 				type: 'options',
+				description: 'Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code-examples/expressions/">expression</a>',
 				noDataExpression: true,
 				displayOptions: {
 					hide: {

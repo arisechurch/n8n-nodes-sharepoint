@@ -7,8 +7,6 @@ export class MicrosoftSharepointApi implements ICredentialType {
 
 	displayName = 'Microsoft Sharepoint OAuth2 API'
 
-	documentationUrl = 'microsoft'
-
 	properties: INodeProperties[] = [
 		{
 			displayName: 'Scope',
