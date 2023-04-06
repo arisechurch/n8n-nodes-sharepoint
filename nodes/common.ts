@@ -14,9 +14,8 @@ import type {
 import { NodeApiError } from "n8n-workflow"
 import type { OptionsWithUri } from "request"
 
-export const N8NId = Symbol.for("N8N")
 export interface N8N {
-  readonly _id: typeof N8NId
+  readonly _: unique symbol
 }
 export const N8N = Tag<
   N8N,
@@ -39,12 +38,10 @@ export function apiRequest<A = any>(
   {
     qs = {},
     body,
-    uri,
     headers = {},
   }: {
     body?: any
     qs?: IDataObject
-    uri?: string
     headers?: IDataObject
   } = {},
 ): Effect<N8N, NodeApiError, A> {
@@ -56,7 +53,7 @@ export function apiRequest<A = any>(
     method,
     body,
     qs,
-    uri: uri || `https://graph.microsoft.com/v1.0${resource}`,
+    uri: `https://graph.microsoft.com/v1.0${resource}`,
     json: true,
   }
 

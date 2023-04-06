@@ -17,6 +17,7 @@ export interface SharepointSite {
 export const sites = apiRequest<Response<SharepointSite[]>>("GET", "/sites", {
   qs: { search: "" },
 })
+
 export const siteOptions = sites.map(({ value }) =>
   value.map(
     (_): INodePropertyOptions => ({

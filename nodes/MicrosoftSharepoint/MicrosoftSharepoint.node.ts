@@ -121,9 +121,5 @@ export class MicrosoftSharepoint implements INodeType {
     },
   }
 
-  // The function below is responsible for actually doing whatever this node
-  // is supposed to do. In this case, we're just appending the `myString` property
-  // with whatever the user has entered.
-  // You can make async calls and use `await`.
   execute = execute(run.map(_ => [_]))
 }
