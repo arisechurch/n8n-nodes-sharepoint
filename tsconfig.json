@@ -16,10 +16,11 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "incremental": true,
+    "tsBuildInfoFile": "./tsconfig.tsbuildinfo",
     "declaration": true,
     "sourceMap": true,
     "skipLibCheck": true,
-    "outDir": "./dist/"
+    "outDir": "./dist"
   },
   "include": [
     "credentials/**/*",
