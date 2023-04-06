@@ -169,7 +169,11 @@ export const run = Do($ => {
 	return $(
 		microsoftApiRequest(method, `/sites/${siteId}/lists/${listId}${path}`, {
 			body: body.getOrUndefined,
-		}).map(_ => wrapExecutionData(_.value ?? _)),
+		})
+			.map(_ => _.value ?? _)
+			.map(_ =>
+				Array.isArray(_) ? _.map(wrapExecutionData) : [wrapExecutionData(_)],
+			),
 	)
 })
 

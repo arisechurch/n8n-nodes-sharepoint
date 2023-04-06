@@ -24,7 +24,8 @@ export class MicrosoftSharepoint implements INodeType {
 				displayName: 'Sharepoint Site Name or ID',
 				name: 'site',
 				type: 'options',
-				description: 'Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code-examples/expressions/">expression</a>',
+				description:
+					'Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code-examples/expressions/">expression</a>',
 				required: true,
 				typeOptions: {
 					loadOptionsMethod: 'getSites',
@@ -48,7 +49,8 @@ export class MicrosoftSharepoint implements INodeType {
 				displayName: 'List Name or ID',
 				name: 'list',
 				type: 'options',
-				description: 'Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code-examples/expressions/">expression</a>',
+				description:
+					'Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code-examples/expressions/">expression</a>',
 				noDataExpression: true,
 				displayOptions: {
 					hide: {
@@ -122,5 +124,5 @@ export class MicrosoftSharepoint implements INodeType {
 	// is supposed to do. In this case, we're just appending the `myString` property
 	// with whatever the user has entered.
 	// You can make async calls and use `await`.
-	execute = execute(run.map(_ => [[_]]))
+	execute = execute(run.map(_ => [_]))
 }
