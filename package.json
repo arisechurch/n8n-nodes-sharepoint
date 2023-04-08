@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-sharepoint",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "N8N Sharepoint node",
   "keywords": [
     "n8n-community-node-package"
