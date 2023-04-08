@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-sharepoint",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "N8N Sharepoint node",
   "keywords": [
     "n8n-community-node-package"
@@ -17,7 +17,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && tsc && gulp build:icons",
+    "build": "rm -rf dist *.tsbuildinfo && tsc && gulp build:icons",
     "dev": "tsc --watch",
     "format": "prettier nodes credentials --write",
     "prepublishOnly": "npm run build"
