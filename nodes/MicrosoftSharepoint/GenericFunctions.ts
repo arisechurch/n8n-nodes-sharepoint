@@ -64,6 +64,6 @@ export const run = Do($ => {
   return $(
     apiRequest(method, `/sites/${siteId}/lists/${listId}${path}`, {
       body: body.getOrUndefined,
-    }).map(wrapJson),
+    }).map(_ => [wrapJson(_)]),
   )
 })

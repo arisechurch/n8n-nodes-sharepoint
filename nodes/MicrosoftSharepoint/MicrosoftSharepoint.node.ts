@@ -89,6 +89,10 @@ export class MicrosoftSharepoint implements INodeType {
             name: "PUT",
             value: "PUT",
           },
+          {
+            name: "DELETE",
+            value: "DELETE",
+          },
         ],
       },
       {
@@ -106,7 +110,7 @@ export class MicrosoftSharepoint implements INodeType {
         type: "json",
         displayOptions: {
           hide: {
-            method: ["GET"],
+            method: ["GET", "DELETE"],
           },
         },
         default: "",
@@ -121,5 +125,5 @@ export class MicrosoftSharepoint implements INodeType {
     },
   }
 
-  execute = execute(run.map(_ => [_]))
+  execute = execute(run)
 }
