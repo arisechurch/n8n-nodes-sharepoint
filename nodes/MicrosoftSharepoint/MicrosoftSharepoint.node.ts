@@ -1,5 +1,11 @@
 import { INodeType, INodeTypeDescription } from "n8n-workflow"
-import { listOptions, run, siteOptions } from "./GenericFunctions"
+import {
+  fileOptions,
+  folderOptions,
+  listOptions,
+  run,
+  siteOptions,
+} from "./GenericFunctions"
 import { execute } from "../common"
 
 export class MicrosoftSharepoint implements INodeType {
@@ -45,8 +51,17 @@ export class MicrosoftSharepoint implements INodeType {
             name: "List",
             value: "lists",
           },
+          {
+            name: "File",
+            value: "files",
+          },
+          {
+            name: "Folder",
+            value: "folders",
+          },
         ],
       },
+      // ==== lists
       {
         displayName: "List Name or ID",
         name: "list",
@@ -63,6 +78,62 @@ export class MicrosoftSharepoint implements INodeType {
         },
         typeOptions: {
           loadOptionsMethod: "getLists",
+        },
+        default: "",
+      },
+      // ==== files & folders
+      {
+        displayName: "Folder path",
+        name: "folder",
+        type: "string",
+        required: true,
+        displayOptions: {
+          hide: {
+            site: [""],
+          },
+          show: {
+            resource: ["files", "folders"],
+          },
+        },
+        default: "",
+      },
+      {
+        displayName: "File ID",
+        name: "fileId",
+        type: "options",
+        description:
+          'Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code-examples/expressions/">expression</a>',
+        displayOptions: {
+          hide: {
+            site: [""],
+            folder: [""],
+          },
+          show: {
+            resource: ["files"],
+          },
+        },
+        typeOptions: {
+          loadOptionsMethod: "getFiles",
+        },
+        default: "",
+      },
+      {
+        displayName: "Folder ID",
+        name: "folderId",
+        type: "options",
+        description:
+          'Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code-examples/expressions/">expression</a>',
+        displayOptions: {
+          hide: {
+            site: [""],
+            folder: [""],
+          },
+          show: {
+            resource: ["folders"],
+          },
+        },
+        typeOptions: {
+          loadOptionsMethod: "getFolders",
         },
         default: "",
       },
@@ -122,6 +193,8 @@ export class MicrosoftSharepoint implements INodeType {
     loadOptions: {
       getSites: execute(siteOptions),
       getLists: execute(listOptions),
+      getFiles: execute(fileOptions),
+      getFolders: execute(folderOptions),
     },
   }
 

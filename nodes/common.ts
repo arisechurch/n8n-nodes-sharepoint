@@ -4,7 +4,6 @@ import { identity } from "@effect/data/Function"
 import type { Option } from "@effect/data/Option"
 import type { Effect } from "@effect/io/Effect"
 import type {
-  IDataObject,
   IExecuteFunctions,
   IExecuteSingleFunctions,
   ILoadOptionsFunctions,
@@ -17,10 +16,7 @@ import type { OptionsWithUri } from "request"
 export interface N8N {
   readonly _: unique symbol
 }
-export const N8N = Tag<
-  N8N,
-  IExecuteFunctions | IExecuteSingleFunctions | ILoadOptionsFunctions
->()
+export const N8N = Tag<N8N, IExecuteFunctions>()
 
 export function execute<E, A>(
   effect: Effect<N8N, E, A>,
@@ -28,33 +24,24 @@ export function execute<E, A>(
   this: IExecuteFunctions | IExecuteSingleFunctions | ILoadOptionsFunctions,
 ) => Promise<A> {
   return function () {
-    return effect.provideService(N8N, this).runPromise
+    return effect.provideService(N8N, this as any).runPromise
   }
 }
 
 export function apiRequest<A = any>(
   method: string,
   resource: string,
-  {
-    qs = {},
-    body,
-    headers = {},
-  }: {
-    body?: any
-    qs?: IDataObject
-    headers?: IDataObject
-  } = {},
+  options: Partial<OptionsWithUri> = {},
 ): Effect<N8N, NodeApiError, A> {
-  const options: OptionsWithUri = {
+  options = {
+    ...options,
     headers: {
-      ...headers,
+      ...(options.headers ?? {}),
       "Content-Type": "application/json",
     },
     method,
-    body,
-    qs,
     uri: `https://graph.microsoft.com/v1.0${resource}`,
-    json: true,
+    json: options.json === false ? false : true,
   }
 
   return Do($ => {
@@ -108,4 +95,8 @@ export function wrapJson(json: any): INodeExecutionData[] {
   }
 
   return [{ json }]
+}
+
+export function wrapData(data: INodeExecutionData): INodeExecutionData[] {
+  return [data]
 }

@@ -1,10 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@effect/data': ^0.11.5
-  '@effect/io': ^0.19.2
-  '@tsplus-types/effect__data': 0.11.5-c9131e9
-  '@tsplus-types/effect__io': 0.19.2-c9131e9
+  '@effect/data': ^0.11.8
+  '@effect/io': ^0.19.3
+  '@effect/match': ^0.12.1
+  '@tsplus-types/effect__data': 0.11.8-c9131e9
+  '@tsplus-types/effect__io': 0.19.3-c9131e9
   '@types/request': ^2.48.8
   gulp: ^4.0.2
   n8n-core: '*'
@@ -13,12 +14,13 @@ specifiers:
   typescript: https://cdn.jsdelivr.net/npm/@tsplus/installer@0.0.171/compiler/typescript.tgz
 
 dependencies:
-  '@effect/data': 0.11.5
-  '@effect/io': 0.19.2
+  '@effect/data': 0.11.8
+  '@effect/io': 0.19.3
+  '@effect/match': 0.12.1
 
 devDependencies:
-  '@tsplus-types/effect__data': 0.11.5-c9131e9_@effect+data@0.11.5
-  '@tsplus-types/effect__io': 0.19.2-c9131e9_@effect+io@0.19.2
+  '@tsplus-types/effect__data': 0.11.8-c9131e9_@effect+data@0.11.8
+  '@tsplus-types/effect__io': 0.19.3-c9131e9_@effect+io@0.19.3
   '@types/request': 2.48.8
   gulp: 4.0.2
   n8n-core: 0.161.0
@@ -28,13 +30,28 @@ devDependencies:
 
 packages:
 
-  /@effect/data/0.11.5:
-    resolution: {integrity: sha512-IRnimtB3/Z3VC9iQUfu3xm9njHXozrTyhOY0nK+0K1XqF/ZcXvONEm4AQ48kjXZTSHFkrKqUn9XwwtmikLCPvA==}
+  /@effect/data/0.11.8:
+    resolution: {integrity: sha512-rOyVE5rbEAbg29mrn2yU4sf9CS3GaC1n8lrc9tjEZxDluHJTS5piu0p8JYv/JzMdRHQMLz6jJhM5INT/qf8c5A==}
 
-  /@effect/io/0.19.2:
-    resolution: {integrity: sha512-8h9rnVPf6afOO4a5NkgfOTdRMqgoyXYA9P1OKtj4IuFSstIf19TfBcJ2UYDGBAFMxWr36OjAOuz6gXZF87hzDQ==}
+  /@effect/io/0.19.3:
+    resolution: {integrity: sha512-da5OwUrkdKxHZlBC+XdIu9+UhyI4IZ9pqN+ubnx7sePcBmIoL4OnTBXIKyHEC9YmuMGAuvdEqxx7icQHB9ZZNg==}
     dependencies:
-      '@effect/data': 0.11.5
+      '@effect/data': 0.11.8
+
+  /@effect/match/0.12.1:
+    resolution: {integrity: sha512-g2324GpILDQCj9hzfkkhG3vRd6wDXYLrTQwH8hkMgKfEFc96xOMtXaYqR00FqsR3kUoEVxPnwaT/oyrfVQzfMA==}
+    dependencies:
+      '@effect/data': 0.11.8
+      '@effect/schema': 0.11.1
+    dev: false
+
+  /@effect/schema/0.11.1:
+    resolution: {integrity: sha512-DDnSGzHRmtq4mFXe2bFGlsXrZj6/yQWsj8rpmh/7SgHecVS0Ea2hRyYRNtKr64XXuiYjF1Yesovy4hfQT/TYfA==}
+    dependencies:
+      '@effect/data': 0.11.8
+      '@effect/io': 0.19.3
+      fast-check: 3.8.0
+    dev: false
 
   /@n8n_io/riot-tmpl/3.0.0:
     resolution: {integrity: sha512-bExAbGAp+LE4EXUcXl/kcZofKefrLIVZl8Kg36fim6KZATrWF8Nh7cdp/dOWzgZT6h8/ScqKxjv23W3KoeR40Q==}
@@ -71,20 +88,20 @@ packages:
     resolution: {integrity: sha512-OvjF+z51L3ov0OyAU0duzsYuvO01PH7x4t6DJx+guahgTnBHkhJdG7soQeTSFLWN3efnHyibZ4Z8l2EuWwJN3A==}
     dev: true
 
-  /@tsplus-types/effect__data/0.11.5-c9131e9_@effect+data@0.11.5:
-    resolution: {integrity: sha512-Vctb0YqunA0xqDnnD14lkjNpYtdFhp/sNJLqt/f2vysNEYFNV1cGhNXW3m90jLdwYHHaCNn8hSBdgf++nmjFhQ==}
+  /@tsplus-types/effect__data/0.11.8-c9131e9_@effect+data@0.11.8:
+    resolution: {integrity: sha512-8ewfCIPNJ/Jq+BzD3fBdlAe8c90thAhvuP4x3nj+oZBVW4fh79WM1A9LyvVRFF4AGw4aujhNU6LVqrMntfBrPQ==}
     peerDependencies:
-      '@effect/data': 0.11.5
+      '@effect/data': 0.11.8
     dependencies:
-      '@effect/data': 0.11.5
+      '@effect/data': 0.11.8
     dev: true
 
-  /@tsplus-types/effect__io/0.19.2-c9131e9_@effect+io@0.19.2:
-    resolution: {integrity: sha512-vEc/4YbGTbFS/Oqaoi04ix+u9iAdF8KqslTIxt6WBTigqCxYv60DGB2O636M/jh1Po1hw75z7w61ROfg7Rj+7Q==}
+  /@tsplus-types/effect__io/0.19.3-c9131e9_@effect+io@0.19.3:
+    resolution: {integrity: sha512-2HaTc1qLvSVkKc4S7rUsdN71AXspJTZjmltsjjzvFAlsS2oGkCArBYlGPn8XvxT/dYWtDQcYveKY3+iUlMCyyg==}
     peerDependencies:
-      '@effect/io': 0.19.2
+      '@effect/io': 0.19.3
     dependencies:
-      '@effect/io': 0.19.2
+      '@effect/io': 0.19.3
     dev: true
 
   /@types/caseless/0.12.2:
@@ -921,6 +938,13 @@ packages:
       parse-node-version: 1.0.1
       time-stamp: 1.1.0
     dev: true
+
+  /fast-check/3.8.0:
+    resolution: {integrity: sha512-Mz6k/+bton0iMXdIaqG/ow81oUCYxIDtmGUvf1Q/9O5QhiLI6T9JaCNEr4Y6LfMOpY/jBUfo8hK+3qd5sGfTfw==}
+    engines: {node: '>=8.0.0'}
+    dependencies:
+      pure-rand: 6.0.1
+    dev: false
 
   /fast-deep-equal/3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
@@ -2468,6 +2492,10 @@ packages:
     resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
     engines: {node: '>=6'}
     dev: true
+
+  /pure-rand/6.0.1:
+    resolution: {integrity: sha512-t+x1zEHDjBwkDGY5v5ApnZ/utcd4XYDiJsaQQoptTXgUXX95sDg1elCdJghzicm7n2mbCBJ3uYWr6M22SO19rg==}
+    dev: false
 
   /qs/6.11.1:
     resolution: {integrity: sha512-0wsrzgTz/kAVIeuxSjnpGC56rzYtr6JT/2BwEvMaPhFIoYa1aGO8LbzuU1R0uUYQkLpWBTOj0l/CLAJB64J6nQ==}
