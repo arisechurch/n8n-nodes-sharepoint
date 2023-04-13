@@ -175,6 +175,13 @@ export class MicrosoftSharepoint implements INodeType {
         default: "/",
       },
       {
+        displayName: "Query Parameters",
+        name: "params",
+        description: "Query parameters to send",
+        type: "json",
+        default: "",
+      },
+      {
         displayName: "Body",
         name: "body",
         description: "JSON body to send",

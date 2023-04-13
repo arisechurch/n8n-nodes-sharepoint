@@ -35,8 +35,8 @@
     ]
   },
   "devDependencies": {
-    "@tsplus-types/effect__data": "0.11.8-c9131e9",
-    "@tsplus-types/effect__io": "0.19.3-c9131e9",
+    "@tsplus-types/effect__data": "0.12.2-3b576ba",
+    "@tsplus-types/effect__io": "0.20.0-3b576ba",
     "@types/request": "^2.48.8",
     "gulp": "^4.0.2",
     "n8n-core": "*",
@@ -45,8 +45,8 @@
     "typescript": "https://cdn.jsdelivr.net/npm/@tsplus/installer@0.0.171/compiler/typescript.tgz"
   },
   "dependencies": {
-    "@effect/data": "^0.11.8",
-    "@effect/io": "^0.19.3",
-    "@effect/match": "^0.12.1"
+    "@effect/data": "^0.12.2",
+    "@effect/io": "^0.20.0",
+    "@effect/match": "^0.13.0"
   }
 }

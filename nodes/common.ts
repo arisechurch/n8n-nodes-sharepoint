@@ -82,6 +82,13 @@ export const getOptionalParam = <A = string>(
     return (getParam(name, i) as Option<A>).filter(_ => !!_)
   })
 
+const parseJson = Option.liftThrowable(JSON.parse)
+
+export const getJsonParam = (name: string, i = 0) =>
+  getOptionalParam<string>(name, i).map(
+    _ => _.flatMap(parseJson) as Option<unknown>,
+  )
+
 export const getParam = <A = string>(name: string, i = 0) =>
   getOptionalParam<A>(name, i)
     .flatMap(identity)

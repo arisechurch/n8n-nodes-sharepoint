@@ -1,11 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@effect/data': ^0.11.8
-  '@effect/io': ^0.19.3
-  '@effect/match': ^0.12.1
-  '@tsplus-types/effect__data': 0.11.8-c9131e9
-  '@tsplus-types/effect__io': 0.19.3-c9131e9
+  '@effect/data': ^0.12.2
+  '@effect/io': ^0.20.0
+  '@effect/match': ^0.13.0
+  '@tsplus-types/effect__data': 0.12.2-3b576ba
+  '@tsplus-types/effect__io': 0.20.0-3b576ba
   '@types/request': ^2.48.8
   gulp: ^4.0.2
   n8n-core: '*'
@@ -14,13 +14,13 @@ specifiers:
   typescript: https://cdn.jsdelivr.net/npm/@tsplus/installer@0.0.171/compiler/typescript.tgz
 
 dependencies:
-  '@effect/data': 0.11.8
-  '@effect/io': 0.19.3
-  '@effect/match': 0.12.1
+  '@effect/data': 0.12.2
+  '@effect/io': 0.20.0
+  '@effect/match': 0.13.0
 
 devDependencies:
-  '@tsplus-types/effect__data': 0.11.8-c9131e9_@effect+data@0.11.8
-  '@tsplus-types/effect__io': 0.19.3-c9131e9_@effect+io@0.19.3
+  '@tsplus-types/effect__data': 0.12.2-3b576ba_@effect+data@0.12.2
+  '@tsplus-types/effect__io': 0.20.0-3b576ba_@effect+io@0.20.0
   '@types/request': 2.48.8
   gulp: 4.0.2
   n8n-core: 0.161.0
@@ -30,26 +30,26 @@ devDependencies:
 
 packages:
 
-  /@effect/data/0.11.8:
-    resolution: {integrity: sha512-rOyVE5rbEAbg29mrn2yU4sf9CS3GaC1n8lrc9tjEZxDluHJTS5piu0p8JYv/JzMdRHQMLz6jJhM5INT/qf8c5A==}
+  /@effect/data/0.12.2:
+    resolution: {integrity: sha512-bmWRTcsSRG1FlBswT+D8SxW6r3c4B3pKJrjYfitCD03tXHnup5gLHaWqbFgIjiyYITS+UsJRRjVrNxvyGG4ZNQ==}
 
-  /@effect/io/0.19.3:
-    resolution: {integrity: sha512-da5OwUrkdKxHZlBC+XdIu9+UhyI4IZ9pqN+ubnx7sePcBmIoL4OnTBXIKyHEC9YmuMGAuvdEqxx7icQHB9ZZNg==}
+  /@effect/io/0.20.0:
+    resolution: {integrity: sha512-6ECG566e0ZjvDQO5/KbZtQpplZiSTT+ERnxd7dEC1WjC5cF6uIICMBGWljgL5hBOEpV8p/UHs00anKxTlYomXg==}
     dependencies:
-      '@effect/data': 0.11.8
+      '@effect/data': 0.12.2
 
-  /@effect/match/0.12.1:
-    resolution: {integrity: sha512-g2324GpILDQCj9hzfkkhG3vRd6wDXYLrTQwH8hkMgKfEFc96xOMtXaYqR00FqsR3kUoEVxPnwaT/oyrfVQzfMA==}
+  /@effect/match/0.13.0:
+    resolution: {integrity: sha512-61TSyZvfA8/+w7yfemdp4q+vcf94WVS9rpgHjg1En5+E/SMPEFjseREowr9Q0qNJIuWpwf2HnmDa+6chZUthzQ==}
     dependencies:
-      '@effect/data': 0.11.8
-      '@effect/schema': 0.11.1
+      '@effect/data': 0.12.2
+      '@effect/schema': 0.12.1
     dev: false
 
-  /@effect/schema/0.11.1:
-    resolution: {integrity: sha512-DDnSGzHRmtq4mFXe2bFGlsXrZj6/yQWsj8rpmh/7SgHecVS0Ea2hRyYRNtKr64XXuiYjF1Yesovy4hfQT/TYfA==}
+  /@effect/schema/0.12.1:
+    resolution: {integrity: sha512-ZW2+d4wIJChhpWKh3NUZpwC/GRllQSFjmOXMz3SL0XryoVt+xVosYZmowd5ufrPvttxk9BNZy/u41RjeFXp3GA==}
     dependencies:
-      '@effect/data': 0.11.8
-      '@effect/io': 0.19.3
+      '@effect/data': 0.12.2
+      '@effect/io': 0.20.0
       fast-check: 3.8.0
     dev: false
 
@@ -88,20 +88,20 @@ packages:
     resolution: {integrity: sha512-OvjF+z51L3ov0OyAU0duzsYuvO01PH7x4t6DJx+guahgTnBHkhJdG7soQeTSFLWN3efnHyibZ4Z8l2EuWwJN3A==}
     dev: true
 
-  /@tsplus-types/effect__data/0.11.8-c9131e9_@effect+data@0.11.8:
-    resolution: {integrity: sha512-8ewfCIPNJ/Jq+BzD3fBdlAe8c90thAhvuP4x3nj+oZBVW4fh79WM1A9LyvVRFF4AGw4aujhNU6LVqrMntfBrPQ==}
+  /@tsplus-types/effect__data/0.12.2-3b576ba_@effect+data@0.12.2:
+    resolution: {integrity: sha512-xqVeUnt6VNtEsaUK75ds1hMIs9VrxEdmFKUmUr4vMgKlX4A7MxGG7b6AWW+qO+S/TW09H796VxtcZ/infrWvgw==}
     peerDependencies:
-      '@effect/data': 0.11.8
+      '@effect/data': 0.12.2
     dependencies:
-      '@effect/data': 0.11.8
+      '@effect/data': 0.12.2
     dev: true
 
-  /@tsplus-types/effect__io/0.19.3-c9131e9_@effect+io@0.19.3:
-    resolution: {integrity: sha512-2HaTc1qLvSVkKc4S7rUsdN71AXspJTZjmltsjjzvFAlsS2oGkCArBYlGPn8XvxT/dYWtDQcYveKY3+iUlMCyyg==}
+  /@tsplus-types/effect__io/0.20.0-3b576ba_@effect+io@0.20.0:
+    resolution: {integrity: sha512-ffB1Ol9UTD63PRBTb9oA+DfeNljSxze/ssmYHptclYXoWsujNhAD62HwZoSGmyUv4l3sBCkZROQ++Ion8eRF+w==}
     peerDependencies:
-      '@effect/io': 0.19.3
+      '@effect/io': 0.20.0
     dependencies:
-      '@effect/io': 0.19.3
+      '@effect/io': 0.20.0
     dev: true
 
   /@types/caseless/0.12.2:

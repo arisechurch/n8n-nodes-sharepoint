@@ -3,6 +3,7 @@ import {
   N8N,
   Response,
   apiRequest,
+  getJsonParam,
   getOptionalParam,
   getParam,
   wrapData,
@@ -132,11 +133,13 @@ export const folderOptions = getFolders.map(_ =>
 const call = <A = any>(url: string) =>
   Do($ => {
     const method = $(getParam("method"))
+    const params = $(getJsonParam("params"))
     const body = $(getOptionalParam("body"))
 
     return $(
       apiRequest<A>(method, url, {
         body: body.getOrUndefined,
+        qs: params.getOrUndefined,
       }),
     )
   })
