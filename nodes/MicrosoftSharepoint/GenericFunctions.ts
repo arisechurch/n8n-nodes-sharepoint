@@ -111,7 +111,7 @@ const getItems = Do($ => {
 })
 
 const getFiles = getItems.map(_ => _.filter(isFile))
-const getFolders = Effect.all([getItem, getItems]).map(([self, children]) =>
+const getFolders = Effect.allPar(getItem, getItems).map(([self, children]) =>
   [self, ...children].filter(isFolder),
 )
 
